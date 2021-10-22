@@ -1,0 +1,1 @@
+Viết chương trình nhập vào n số (ít nhất 2 số). Xuất ra ước chung lớn nhất và bội chung bội chung nhỏ nhất của n số.

@@ -46,6 +46,7 @@ int UCLN(int m[], int n)
     return x;
 }
 
+//Bội chung nhỏ nhất của 2 phần tử
 int BC( int x, int y)
 {
     if (x<y)
@@ -71,6 +72,7 @@ int BC( int x, int y)
     return y;
 } 
 
+//Bội chung nhỏ nhất của mảng số
 int BCNN(int m[],int n)
 {
     int x = m[0];
@@ -80,6 +82,7 @@ int BCNN(int m[],int n)
     }
     return x;
 }
+
 int main()
 {
     int m[100];

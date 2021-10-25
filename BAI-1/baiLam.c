@@ -85,6 +85,10 @@ int BCNN(int m[],int n)
 
 int main()
 {
+    // Cú pháp sau phẩy luôn là 1 khoản trắng. Nhớ để ý cách trình bày code, để sau này đọc lại dể hiểu code hơn.
+    // Sử dụng Alt + Ctrl + F để format code cho đẹp code. Nếu chưa có thì cài Extention https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+    // Chổ khai báo này khi khai báo cùng kiểu dữ liệu có thể khai báo như thế này nha
+    // int m[100], n;
     int m[100];
     int n;
     printf("Nhap vao so phan tu:");

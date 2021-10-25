@@ -1,0 +1,1 @@
+Viết chương trình nhập vào 3 số. Kiểm tra đó có phải tam giác hay không. Nếu đúng là tam giác thì phân loại tam giác đó là tam giác gì.

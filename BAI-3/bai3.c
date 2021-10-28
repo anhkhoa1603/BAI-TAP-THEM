@@ -171,11 +171,12 @@ int main()
             break;
         }
         printf("\n");
-        printf("\nDO YOU WANT TI TRY AGAINT???\n");
+        printf("\nDO YOU WANT TO TRY AGAINT???\n");
         printf("1. YES\n");
         printf("0. NO\n");
         printf("ENTER:");
         scanf("%d", &b);
     } while (b == 1);
-    printf("HAVE A NICE DAY!!");
+    printf("\nHAVE A NICE DAY!!");
+    printf("\n \n");
 }

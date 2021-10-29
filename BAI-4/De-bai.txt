@@ -1,0 +1,13 @@
+10 bài tập nhỏ. Đặt tên file *.c tương ứng mỗi bài, ví dụ: CAU-1.c, CAU-2.c, ...
+Có thể gom tất cả các câu thành 1 file BAI-4.c khi chạy có menu chọn câu tương ứng. Menu ghi đề bài tương ứng.
+
+Đề bài:
+Câu 1: Tính S(n) = 1 + 1.2 + 1.2.3 + … + 1.2.3….N
+Câu 2: Tính S(n) = x + x^2 + x^3 + … + x^n
+Câu 3: Tính S(n) = x^2 + x^4 + … + x^2n
+Câu 4: Tính S(n) = x + x^3 + x^5 + … + x^2n + 1
+Câu 5: Tính S(n) = 1 + 1/1 + 2 + 1/ 1 + 2 + 3 + ….. + 1/ 1 + 2 + 3 + …. + N
+Câu 6: Tính S(n) = x + x^2/1 + 2 + x^3/1 + 2 + 3 + … + x^n/1 + 2 + 3 + …. + N
+Câu 7: Tính S(n) = x + x^2/2! + x^3/3! + … + x^n/N!
+Câu 8: Tính S(n) = 1 + x^2/2! + x^4/4! + … + x^2n/(2n)!
+Câu 9: Tính S(n) = 1 + x + x^3/3! + x^5/5! + … + x^(2n+1)/(2n+1)!

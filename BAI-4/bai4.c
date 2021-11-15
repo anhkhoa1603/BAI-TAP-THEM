@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 void s1(int n)
 {
@@ -16,12 +17,12 @@ void s1(int n)
 
 void s2(int x, int n)
 {
-    int S = 0, i = 1, M = 1;
+    int S = 0, m = 1;
 
-    while (i <= n)
+    for (int i = 1; i <= n; i++)
     {
-        M = M * x;
-        S = S + M;
+        m *= x;
+        S = S + m;
     }
 
     printf("S(%d, %d) = %d", x, n, S);
@@ -29,11 +30,13 @@ void s2(int x, int n)
 
 void s3(int x, int n)
 {
-    int S = 0, i = 1;
+    int S = 0, i = 1, m = 1;
 
     while (i <= n)
     {
-        S = S + x ^ (2 * i);
+        m = m * x * x;
+        S = S + m;
+        i++;
     }
 
     printf("S(%d, %d) = %d", x, n, S);
@@ -41,11 +44,13 @@ void s3(int x, int n)
 
 void s4(int x, int n)
 {
-    int S, i = 0;
+    int S = 0, i = 0, m = 1;
 
     while (i <= n)
     {
-        S = S + x ^ (2 * i + 1);
+        m = pow(x, (2 * i + 1));
+        S = S + m;
+        i++;
     }
 
     printf("S(%d, %d) = %d", x, n, S);
@@ -68,14 +73,15 @@ void s5(int n)
 
 void s6(int x, int n)
 {
-    int i = 1, a = 0;
-    double S = 0, M = 1;
-    while (i <= n)
+    float S = 0, T;
+    long M = 0;
+    int i = 1;
+
+    while(i <= n)
     {
-        a = a + i;
-        M = M * x;
-        S = S + M / a;
-        i = i + 1;
+        T = pow(x, i);
+        S = S + T;
+        i++;
     }
 
     printf("S(%d, %d) = %d", x, n, S);
@@ -149,7 +155,7 @@ int main()
         printf("\nDO YOU WANT TO TRY AGAINT???\n");
         printf("1. YES\n");
         printf("0. NO\n");
-        printf("ENTER:");
+        printf("ENTER: ");
         scanf("%d", &b);
     } while (b == 1);
     printf("\nHAVE A NICE DAY!!");

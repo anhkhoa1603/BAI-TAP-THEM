@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void s1(int n)
+int s1(int n)
 {
     int S = 0, i = 1, a = 1;
 
@@ -12,10 +12,10 @@ void s1(int n)
         i = i + 1;
     }
 
-    printf("S(%d) = %d", n, S);
+    return S;
 }
 
-void s2(int x, int n)
+int s2(int x, int n)
 {
     int S = 0, m = 1;
 
@@ -25,10 +25,10 @@ void s2(int x, int n)
         S = S + m;
     }
 
-    printf("S(%d, %d) = %d", x, n, S);
+    return S;
 }
 
-void s3(int x, int n)
+int s3(int x, int n)
 {
     int S = 0, i = 1, m = 1;
 
@@ -39,12 +39,12 @@ void s3(int x, int n)
         i++;
     }
 
-    printf("S(%d, %d) = %d", x, n, S);
+    return S;
 }
 
-void s4(int x, int n)
+int s4(int x, int n)
 {
-    int S = 0, i = 0, m = 1;
+    int S = 0, i = 0, m = x;
 
     while (i <= n)
     {
@@ -53,10 +53,10 @@ void s4(int x, int n)
         i++;
     }
 
-    printf("S(%d, %d) = %d", x, n, S);
+    return S;
 }
 
-void s5(int n)
+float s5(int n)
 {
     int i = 1, a = 0;
     float S = 0;
@@ -68,28 +68,80 @@ void s5(int n)
         i = i + 1;
     }
 
-    printf("S(%d) = %.2f", n, S);
+    return S;
 }
 
-void s6(int x, int n)
+float s6(int x, int n)
 {
-    float S = 0, T;
+    float S = 0, T = 1;
     long M = 0;
     int i = 1;
 
     while(i <= n)
     {
-        T = pow(x, i);
-        S = S + T;
+        T = T * x;
+        M = M + i;
+        S = S + T / M;
         i++;
     }
 
-    printf("S(%d, %d) = %d", x, n, S);
+    return S;
+}
+
+float s7(int x, int n)
+{
+    float S = 0, T = 1;
+    long M = 1;
+    int i = 1;
+
+    while(i <= n)
+    {
+        T = T * x;
+        M = M * i;
+        S = S + T / M;
+        i++;
+    }
+
+    return S;
+}
+
+float s8(int x, int n)
+{
+    float S = 1, T = 1;
+    long M = 1;
+    int i = 1;
+
+    while(i <= n)
+    {
+        T = T * x * x;
+        M = M * (2 * i) * ((2 * i) - 1);
+        S = S + T / M;
+        i ++;
+    }
+
+    return S;
+}
+
+float s9(int x, int n)
+{
+    float S = 1 + x, T = x;
+    long M = 1;
+    int i = 1;
+
+    while(i <= n)
+    {
+        T = T * x * x;
+        M = M * (2 * i) * ((2 * i) + 1);
+        S = S + T / M;
+        i ++;
+    }
+
+    return S;
 }
 
 int main()
 {
-    int b, n, a;
+    int x, n, b, a;
     do
     {
         printf("-----PLESASE CHOOSE ONE OF FOLLOWING METHODS-----\n");
@@ -105,48 +157,54 @@ int main()
 
         printf("\nYOU CHOOSE: ");
         scanf("%d", &a);
+        
+        switch (a)
+        {
+        case 2:
+        case 3:
+        case 4:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            printf("\nEnter x: ");
+            scanf("%d", &x);
+            break;
+        default:
+            break;
+        }
 
         printf("\nENTER n: ");
-        scanf("%d", &n);
-
-        int x;
+            scanf("%d", &n);
 
         switch (a)
         {
         case 1:
-            s1(n);
+            printf("S(%d) = %d", n, s1(n));
             break;
         case 2:
-            printf("Enter x: ");
-            scanf("%d", &x);
-            s2(x,n);
+            printf("S(%d, %d) = %d",x, n, s2(x,n));
             break;
         case 3:
-            printf("Enter x: ");
-            scanf("%d", &x);
-            s3(x,n);
+            printf("S(%d, %d) = %d",x, n, s3(x,n));
             break;
         case 4:
-            printf("Enter x: ");
-            scanf("%d", &x);
-            s4(x,n);
+            printf("S(%d, %d) = %d",x, n, s4(x,n));
             break;
         case 5:
-            s5(n);
+            printf("S(%d) = %.5f", n, s5(n));
             break;
         case 6:
-            printf("Enter x: ");
-            scanf("%d", &x);
-            s6(x,n);
+            printf("S(%d, %d) = %.5f",x, n, s6(x,n));
             break;
         case 7:
-
+            printf("S(%d, %d) = %.5f",x, n, s7(x,n));
             break;
         case 8:
-
+            printf("S(%d, %d) = %.5f",x, n, s8(x,n));
             break;
         case 9:
-
+            printf("S(%d, %d) = %.5f",x, n, s9(x,n));
             break;
         default:
             break;

@@ -2,11 +2,15 @@
 
 void s1(int n)
 {
-    int S,i;
+    int S, i;
     for (i = 1; i <= n; i++)
     {
         S = S + i;
     }
+    /*
+    // Có thể làm vầy nha, thuật toán sẽ rút gọn hơn.
+    S = (n + 1) * n / 2;
+    */
     printf("S(%d) = %d", n, S);
 }
 
@@ -67,7 +71,7 @@ void s6(int n)
 
 void s7(int n)
 {
-    double S = 0,i;
+    double S = 0, i;
     for (i = 1; i <= n; i++)
     {
         S = S + i / (i + 1);

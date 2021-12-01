@@ -53,6 +53,70 @@ void cau4(int n)
     printf("Count = %d", count);
 }
 
+void cau5(int n)
+{
+    for(int i = 0; i < n/2; i++)
+    {
+        if(n % (i + 1) == 0)
+        {
+            if((i + 1) % 2 == 1)
+            {
+                printf("%d ", i + 1);
+            }
+        }
+    }
+}
+
+void cau6(int n)
+{
+    int s = 0;
+    for(int i = 0; i < n/2; i++)
+    {
+        if(n % (i + 1) == 0)
+        {
+            if((i + 1) % 2 == 0)
+            {
+                s += (i + 1);
+            }
+        }
+    }
+    printf("S = %d", s);
+}
+
+void cau7(int n)
+{
+    int s = 1;
+    for(int i = 0; i < n/2; i++)
+    {
+        if(n % (i + 1) == 0)
+        {
+            if((i + 1) % 2 == 1)
+            {
+                s *= (i + 1);
+            }
+        }
+    }
+    printf("S = %d", s);
+}
+
+void cau8(int n)
+{
+    int count = 0;
+    for(int i = 0; i < n/2; i++)
+    {
+        if(n % (i + 1) == 0)
+        {
+            if((i + 1) % 2 == 0)
+            {
+                count++;
+            }
+        }
+    }
+    printf("%d", count);
+}
+
+
+
 int main()
 {
     int chon;
@@ -86,6 +150,18 @@ int main()
             break;
         case 4:
             cau4(n);
+            break;
+        case 5:
+            cau5(n);
+            break;
+        case 6:
+            cau6(n);
+            break;
+        case 7:
+            cau7(n);
+            break;
+        case 8:
+            cau8(n);
             break;
     
     }

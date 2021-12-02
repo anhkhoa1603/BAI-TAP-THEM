@@ -1,0 +1,15 @@
+12 bài tập nhỏ. Đặt tên file *.c tương ứng mỗi bài, ví dụ: CAU-1.c, CAU-2.c, ...
+Có thể gom tất cả các câu thành 1 file BAI-6.c khi chạy có menu chọn câu tương ứng. Menu ghi đề bài tương ứng.
+
+Đề bài:
+Bài 1: Cho số nguyên dương n. Kiểm tra xem n có phải là số hoàn thiện hay không
+Bài 2: Cho số nguyên dương n. Kiểm tra xem n có phải là số nguyên tố hay không
+Bài 3: Cho số nguyên dương n. Kiểm tra xem n có phải là số chính phương hay không
+Bài 4: Tính S(n) = CanBac2(2+CanBac2(2+….+CanBac2(2 + CanBac2(2)))) có n dấu căn
+Bài 6: Tính S(n) = CanBac2(n+CanBac2(n – 1 + CanBac2( n – 2 + … + CanBac2(2 + CanBac2(1)  có n dấu căn
+Bài 7: Tính S(n) = CanBac2(n! + CanBac2((n-1)! +CanBac2((n – 2)! + … + CanBac2(2!) + CanBac2(1!)))) có n dấu căn
+Bài 8: Tính S(n) = CanBac N(N + CanBac N – 1(N – 1 + … + CanBac3(3 + CanBac2(2))) có n – 1 dấu căn
+Bài 9: Tính S(n) = CanBac N + 1(N + CanBac N(N – 1 +…+CanBac3(2 + CanBac2(1)))) có n dấu căn
+Bài 10: Tính S(n) = CanBac N + 1(N! + CanBacN((N – 1)! + … + CanBac3(2! + CanBac2(1!))) có n dấu căn
+Bài 11: Tính S(n) = CanBac2(x^n + CanBac2(x^n-1 + … + CanBac2(x^2 + CanBac2(x)))) có n dấu căn
+Bài 12: Tính S(n) = 1 / (1 + 1 / ( 1 + 1 / (…. 1 + 1 / 1 + 1))) có n dấu phân số

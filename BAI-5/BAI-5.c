@@ -115,7 +115,32 @@ void cau8(int n)
     printf("%d", count);
 }
 
+void cau9(int n)
+{
+    int s = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if(n % i == 0)
+        {
+            s += i;
+            printf("%d", i);
+        }
+    }
+    printf("%d", s);
+}
 
+void cau10(int n)
+{
+    int max;
+    for(int i = 0; i < n; i++)
+    {
+        if(n % i ==0 && i % 2 == 1)
+        {
+            max = i;
+        }   
+    }
+    printf("%d", max);
+}
 
 int main()
 {
@@ -163,7 +188,12 @@ int main()
         case 8:
             cau8(n);
             break;
-    
+        case 9:
+            cau9(n);
+            break;
+        case 10:
+            cau10(n);
+            break;
     }
 
     return 0;
